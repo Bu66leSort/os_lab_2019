@@ -1,0 +1,4 @@
+mkdir static
+gcc -c c/revert_string.c -o static/revert_string.o
+ar rcs static/libstatic.a static/revert_string.o
+gcc c/main.o -Lstatic/ -lstatic -o static/static

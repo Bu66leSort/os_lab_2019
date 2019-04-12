@@ -1,0 +1,5 @@
+mkdir dynamic
+gcc -c -fPIC c/revert_string.c -o dynamic/revert_string.o
+gcc -shared dynamic/revert_string.o -o dynamic/libdynamic.so
+gcc c/main.o -Ldynamic/ -ldynamic -o dynamic/dynamic
+LD_LIBRARY_PATH=$(pwd)/dynamic/ dynamic/dynamic

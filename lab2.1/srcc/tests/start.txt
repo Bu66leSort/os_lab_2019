@@ -1,0 +1,1 @@
+LD_LIBRARY_PATH=$(pwd)/../revert_string/task3/ ./test
